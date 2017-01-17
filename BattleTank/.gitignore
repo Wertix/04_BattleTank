@@ -50,6 +50,9 @@ Binaries/*
 # Builds
 Build/*
 
+# Starter Content
+Content/StarterContent/*
+
 # Don't ignore icon files in Build
 !Build/**/*.ico
 
@@ -61,3 +64,6 @@ Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+
+Content/StarterContent/
