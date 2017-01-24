@@ -1,8 +1,9 @@
 // Copyright Igor Berus 2017
 
-#include "TankBarrel.h"
-#include "TankAimingComponent.h"
 #include "BattleTank.h"
+#include "TankBarrel.h"
+#include "TankTurret.h"
+#include "TankAimingComponent.h"
 #include "Tank.h"
 
 // Sets default values
@@ -19,11 +20,15 @@ void ATank::SetBarrelReference(UTankBarrel * BarrelToSet)
 	TankAimingComponent->SetBarrelReference(BarrelToSet);
 }
 
+void ATank::SetTurretReference(UTankTurret * TurretToSet)
+{
+	TankAimingComponent->SetTurretReference(TurretToSet);
+}
+
 // Called when the game starts or when spawned
 void ATank::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called to bind functionality to input
@@ -35,4 +40,10 @@ void ATank::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 void ATank::AimAt(FVector HitLocation)
 {
 	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
+}
+
+void ATank::Fire()
+{
+	auto Time = GetWorld()->GetTimeSeconds();
+	UE_LOG(LogTemp, Warning, TEXT("%f FIRE!"), Time);
 }

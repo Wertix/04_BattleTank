@@ -1,7 +1,7 @@
 // Copyright Igor Berus 2017
 
-#include "Tank.h"
 #include "BattleTank.h"
+#include "Tank.h"
 #include "TankAIController.h"
 
 void ATankAIController::BeginPlay()
