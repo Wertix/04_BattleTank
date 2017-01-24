@@ -1,5 +1,6 @@
 // Copyright Igor Berus 2017
 
+#include "Tank.h"
 #include "BattleTank.h"
 #include "TankPlayerController.h"
 
